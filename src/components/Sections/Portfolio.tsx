@@ -26,10 +26,10 @@ const Portfolio: FC = memo(() => {
                   <Image 
                     alt={title} 
                     className="h-full w-full object-cover" 
+                    height={500}
                     placeholder="blur" 
                     src={image}
                     width={800}
-                    height={500}
                   />
                   <ItemOverlay item={item} />
                 </div>

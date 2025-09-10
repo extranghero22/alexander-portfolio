@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import {NextApiRequest, NextApiResponse} from 'next';
 import sgMail from '@sendgrid/mail';
 
 // Set your SendGrid API key
@@ -6,15 +6,15 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
+    return res.status(405).json({message: 'Method not allowed'});
   }
 
   try {
-    const { name, email, message } = req.body;
+    const {name, email, message} = req.body;
 
     // Validate required fields
     if (!name || !email || !message) {
-      return res.status(400).json({ message: 'Missing required fields' });
+      return res.status(400).json({message: 'Missing required fields'});
     }
 
     // Email to you (the recipient)
@@ -76,9 +76,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       sgMail.send(autoReplyMsg)
     ]);
 
-    res.status(200).json({ message: 'Email sent successfully' });
+    res.status(200).json({message: 'Email sent successfully'});
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ message: 'Failed to send email' });
+    res.status(500).json({message: 'Failed to send email'});
   }
 }

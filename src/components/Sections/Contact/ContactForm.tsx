@@ -69,27 +69,28 @@ const ContactForm: FC = memo(() => {
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
       <input 
         className={inputClasses} 
+        disabled={isSubmitting}
         name="name" 
         onChange={onChange} 
         placeholder="Name" 
         required 
         type="text"
         value={data.name}
-        disabled={isSubmitting}
       />
       <input
         autoComplete="email"
         className={inputClasses}
+        disabled={isSubmitting}
         name="email"
         onChange={onChange}
         placeholder="Email"
         required
         type="email"
         value={data.email}
-        disabled={isSubmitting}
       />
       <textarea
         className={inputClasses}
+        disabled={isSubmitting}
         maxLength={250}
         name="message"
         onChange={onChange}
@@ -97,7 +98,6 @@ const ContactForm: FC = memo(() => {
         required
         rows={6}
         value={data.message}
-        disabled={isSubmitting}
       />
       
       {/* Status Messages */}
@@ -116,8 +116,8 @@ const ContactForm: FC = memo(() => {
       <button
         aria-label="Submit contact form"
         className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800 disabled:opacity-50 disabled:cursor-not-allowed"
-        type="submit"
         disabled={isSubmitting}
+        type="submit"
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>

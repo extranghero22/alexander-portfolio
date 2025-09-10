@@ -12,14 +12,12 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.jpg';
-
-import saasconsoleImage from '../images/portfolio/saasconsole.png';
-import loanwatchImage from '../images/portfolio/loanwatch.png';
 import grubmarketImage from '../images/portfolio/grubmarket.png';
-import zentiveImage from '../images/portfolio/zentive-img.png';
-import vecosImage from '../images/portfolio/vcs.png';
+import loanwatchImage from '../images/portfolio/loanwatch.png';
+import saasconsoleImage from '../images/portfolio/saasconsole.png';
 import snaptoappImage from '../images/portfolio/snap.png';
-
+import vecosImage from '../images/portfolio/vcs.png';
+import zentiveImage from '../images/portfolio/zentive-img.png';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
