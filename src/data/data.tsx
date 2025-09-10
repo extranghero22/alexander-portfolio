@@ -100,7 +100,7 @@ export const aboutData: About = {
   I am a quick learner and I am always looking to improve my skills. My main tech stack is React and Golang. I have worked on a variety of projects, from small to large, and I have a strong understanding of the software development process. `,
   aboutItems: [
     {label: 'Location', text: 'Bulacan, Philippines', Icon: MapIcon},
-    {label: 'Age', text: '25', Icon: CalendarIcon},
+    {label: 'Age', text: '26', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Filipino', Icon: FlagIcon},
     {label: 'Interests', text: 'Motorcycles, Gaming, Traveling', Icon: SparklesIcon},
     {label: 'Study', text: 'STI College of Balagtas', Icon: AcademicCapIcon},
