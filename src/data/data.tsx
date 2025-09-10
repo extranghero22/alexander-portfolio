@@ -8,23 +8,18 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
-import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import heroImage from '../images/header-background.jpg';
+
+import saasconsoleImage from '../images/portfolio/saasconsole.png';
+import loanwatchImage from '../images/portfolio/loanwatch.png';
+import grubmarketImage from '../images/portfolio/grubmarket.png';
+import zentiveImage from '../images/portfolio/zentive-img.png';
+import vecosImage from '../images/portfolio/vcs.png';
+import snaptoappImage from '../images/portfolio/snap.png';
+
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -44,8 +39,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Alexander Venus Portfolio',
+  description: "Alexander Venus Portfolio Website",
 };
 
 /**
@@ -69,24 +64,23 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Alexander Venus.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Philippines based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
+        at <strong className="text-stone-100">Hooli Software Inc</strong> helping build software solutions for our clients.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time time, you can catch me mashing buttons in <strong className="text-stone-100">Wuthering Waves</strong>,
+        studying <strong className="text-stone-100">Next.js</strong>, or exploring beautiful{' '}
+        <strong className="text-stone-100">South East Asian Countries</strong>.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '/assets/Venus, Alexander M._CV.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -104,16 +98,15 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I am a software engineer with a passion for building software solutions that are both functional and efficient. 
+  I am a quick learner and I am always looking to improve my skills. My main tech stack is React and Golang. I have worked on a variety of projects, from small to large, and I have a strong understanding of the software development process. `,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Bulacan, Philippines', Icon: MapIcon},
+    {label: 'Age', text: '25', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Filipino', Icon: FlagIcon},
+    {label: 'Interests', text: 'Motorcycles, Gaming, Traveling', Icon: SparklesIcon},
+    {label: 'Study', text: 'STI College of Balagtas', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Hooli Software Inc.', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -126,16 +119,12 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'English',
+        level: 7,
+      },
+      {
+        name: 'Filipino',
         level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
+      }
     ],
   },
   {
@@ -143,15 +132,15 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 9,
+        level: 10,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 9,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'Next.js',
+        level: 4,
       },
     ],
   },
@@ -159,33 +148,33 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
-        name: 'Node.js',
-        level: 8,
+        name: 'Golang',
+        level: 10,
       },
       {
-        name: 'Rust',
+        name: 'VB .Net',
         level: 5,
       },
       {
-        name: 'Golang',
+        name: 'Node.js',
         level: 4,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'State Management Libraries',
     skills: [
       {
-        name: 'React Native',
+        name: 'Redux Saga',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'Tanstack Query',
+        level: 8,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Jotai',
+        level: 7,
       },
     ],
   },
@@ -196,71 +185,47 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
+    title: 'SaaSConsole',
+    description: 'SaaSConsole is a platform that manages groups of users and collections of SaaS apps. It helps the user manage their users/groups and assign them to multiple SaaS applications with common rights.',
+    url: 'https://www.saasconsole.com',
+    image: saasconsoleImage,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
+    title: 'Loanwatch',
+    description: 'LoanWatch is a financial technology platform that specializes in Asset-Based Lending (ABL) automation. It serves as a calculation engine that automates ineligibles and borrowing base calculations for financial institutions.',
+    url: 'https://loanwatch.io/',
+    image: loanwatchImage,
+  },
+ 
+  {
+    title: 'Zentive',
+    description: 'Zentive is an all-in-one Field Service Management Software designed specifically for the green industry. It automates daily business operations for landscaping, lawn care, tree service, and snow removal businesses.',
+    url: 'https://zentive.io/',
+    image: zentiveImage,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
+    title: 'Vecos',
+    description: 'Vecos is a digital locker access management platform that provides secure access control and user management for locker systems. It enables users to reserve, access, and manage lockers through a web-based interface.',
+    url: 'https://www.vecos.com',
+    image: vecosImage,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
+
+    title: 'SnaptoApp',
+    description: 'SnaptoApp is a platform that helps the users to create their own pwa apps without the need to code.',
+    url: 'https://www.snaptoapp.com/',
+    image: snaptoappImage,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
+    title: 'GrubMarket Connect',
+    description: 'Grubmarket Connect is a proprietary platform made specifically for the Grubmarket Group.',
+    url: 'https://www.grubmarket.com',
+    image: grubmarketImage,
   },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
+  
+
+  
+ 
 ];
 
 /**
@@ -268,39 +233,50 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'June 2020',
+    location: 'STI College of Balagtas',
+    title: 'Bachelor of Science Major in Computer Engineering',
+    content: <></>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
+    date: 'June 2015',
+    location: 'Jesus is Lord Colleges Inc',
+    title: 'High School',
+    content: <></>
+  }
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'June 2022 - Present',
+    location: 'Hooli Software Inc',
+    title: 'Full Stack Developer - Team Lead',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Got more responsibilities and started leading a team of developers. Also started to create projects from scratch and help other projects to finish the development.
+        <br/> Notable Projects: Zentive and Vecos, 
+      </p>
+    ),
+  },
+
+  {
+    date: 'May 2021 - June 2022',
+    location: 'Hooli Software',
+    title: 'Junior Full Stack Developer',
+    content: (
+      <p>
+          Started working on projects more so on frontend development. I have also developed some backend tools with GoLang. I also got to work for some months with Terraform.
+          <br/>Notable Projects: SaaSConsole, Loanwatch, GrubMarket
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'March 2021 - May 2021',
+    location: 'Hooli Software',
+    title: 'Intern Software Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Trained for 2 months on the basics of software development and then started working on projects more so on frontend development.
       </p>
     ),
   },
@@ -340,23 +316,23 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'alexandervenus22@gmail.com',
+      href: 'mailto:alexandervenus22@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Bulacan, Philippines',
+      href: 'https://www.google.com/maps/place/Bulacan/@14.8560519,120.8300262,12z/data=!3m1!4b1!4m6!3m5!1s0x3397c8262c6b37a1:0x564808802819302!8m2!3d14.8560519!4d120.8300262!16s%2Fg%2F11f86qk1nb?hl=en&entry=ttu',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@bbaboiiiii',
+      href: 'hhttps://www.instagram.com/bbaboiiiii/',
     },
     {
-      type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      type: ContactType.LinkedIn,
+      text: 'Alexander Venus',
+      href: 'https://www.linkedin.com/in/alexander-venus-338482150/',
     },
   ],
 };
@@ -365,9 +341,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/alexander-venus-338482150/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'hhttps://www.instagram.com/bbaboiiiii/'},
+  {label: 'Twitter', Icon: TwitterIcon, href: 'https://x.com/extrangxander22'},
 ];
