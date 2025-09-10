@@ -185,45 +185,33 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'SaaSConsole',
     description: 'SaaSConsole is a platform that manages groups of users and collections of SaaS apps. It helps the user manage their users/groups and assign them to multiple SaaS applications with common rights.',
-    url: 'https://www.saasconsole.com',
     image: saasconsoleImage,
   },
   {
     title: 'Loanwatch',
     description: 'LoanWatch is a financial technology platform that specializes in Asset-Based Lending (ABL) automation. It serves as a calculation engine that automates ineligibles and borrowing base calculations for financial institutions.',
-    url: 'https://loanwatch.io/',
     image: loanwatchImage,
   },
- 
   {
     title: 'Zentive',
     description: 'Zentive is an all-in-one Field Service Management Software designed specifically for the green industry. It automates daily business operations for landscaping, lawn care, tree service, and snow removal businesses.',
-    url: 'https://zentive.io/',
     image: zentiveImage,
   },
   {
-    title: 'Vecos',
-    description: 'Vecos is a digital locker access management platform that provides secure access control and user management for locker systems. It enables users to reserve, access, and manage lockers through a web-based interface.',
-    url: 'https://www.vecos.com',
+    title: 'Vecos Locker Access Platform',
+    description: 'Vecos Locker Access Platform is a digital locker access management platform that provides secure access control and user management for locker systems. It enables users to reserve, access, and manage lockers through a web-based interface.',
     image: vecosImage,
   },
   {
-
     title: 'SnaptoApp',
     description: 'SnaptoApp is a platform that helps the users to create their own pwa apps without the need to code.',
-    url: 'https://www.snaptoapp.com/',
     image: snaptoappImage,
   },
   {
     title: 'GrubMarket Connect',
     description: 'Grubmarket Connect is a proprietary platform made specifically for the Grubmarket Group.',
-    url: 'https://www.grubmarket.com',
     image: grubmarketImage,
   },
-  
-
-  
- 
 ];
 
 /**
